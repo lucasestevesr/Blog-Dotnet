@@ -1,5 +1,3 @@
-using System;
-
 namespace BlogLucas.Screens.TagScreens
 {
     public static class MenuTagScreen

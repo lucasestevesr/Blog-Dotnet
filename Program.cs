@@ -2,6 +2,7 @@
 using BlogLucas.Models;
 using BlogLucas.Repositories;
 using BlogLucas.Screens.CategoryScreens;
+using BlogLucas.Screens.RoleScreens;
 using BlogLucas.Screens.TagScreens;
 using BlogLucas.Screens.UserScreens;
 using Dapper.Contrib.Extensions;
@@ -11,7 +12,7 @@ namespace BlogLucas
 {
     class Program
     {
-        private const string CONNECTION_STRING = @"Server=localhost,1433;Database=BlogLucas;User ID=sa;Password=;TrustServerCertificate=True";
+        private const string CONNECTION_STRING = @"Server=localhost,1433;Database=BlogLucas;User ID=sa;Password=Rkpzlx56!!;TrustServerCertificate=True";
         static void Main(string[] args)
         {
             Database.Connection = new SqlConnection(CONNECTION_STRING);
@@ -45,6 +46,9 @@ namespace BlogLucas
             {
                 case 1: 
                     MenuUserScreen.Load();
+                    break;
+                case 2:
+                    MenuRoleScreen.Load();
                     break;
                 case 3:
                     MenuCategoryScreen.Load();

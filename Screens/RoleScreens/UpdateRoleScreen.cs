@@ -1,45 +1,38 @@
-using System;
 using BlogLucas.Models;
 using BlogLucas.Repositories;
 
-namespace BlogLucas.Screens.CategoryScreens
+namespace BlogLucas.Screens.RoleScreens
 {
-    public static class UpdateCategoryScreen
+    public static class UpdateRoleScreen
     {
         public static void Load()
         {
             Console.Clear();
-            Console.WriteLine("Updating a Category: ");
-            Console.WriteLine("-------------- ");
-
+            Console.WriteLine("Updating a Tag: ");
+            Console.WriteLine("-------------- ");            
             Console.WriteLine("Whats the Id: ");
             var id = Console.ReadLine();
-
             Console.WriteLine("Name: ");
             var name = Console.ReadLine();
-
             Console.WriteLine("Slug: ");
             var slug = Console.ReadLine();
-
-            var posts = new List<Post>();       
-               
-            Update(new Category(posts)
+            Update(new Role
             {
                 Id = int.Parse(id),
                 Name = name,
-                Slug = slug 
+                Slug = slug,
             });
             Console.ReadKey();
-            MenuCategoryScreen.Load();
+            MenuRoleScreen.Load();
         }
 
-        public static void Update(Category category)
+        public static void Update(Role role)
         {
             try
             {
-                var repository = new Repository<Category>(Database.Connection);
-                repository.Update(category);
-                Console.WriteLine("User was sucessfull updated.");
+                var repository = new Repository<Role>(Database.Connection);
+                repository.Update(role);
+                Console.WriteLine("Tag was sucessfull updated.");
             }
             catch (Exception ex)
             {

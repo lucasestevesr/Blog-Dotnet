@@ -2,29 +2,29 @@ using System;
 using BlogLucas.Models;
 using BlogLucas.Repositories;
 
-namespace BlogLucas.Screens.UserScreens
+namespace BlogLucas.Screens.RoleScreens
 {
-    public static class DeleteUserScreen
+    public static class DeleteRoleScreen
     {
         public static void Load()
         {
             Console.Clear();
-            Console.WriteLine("Delete a User: ");
+            Console.WriteLine("Delete a Role: ");
             Console.WriteLine("-------------- ");
             Console.WriteLine("Whats the Id: ");
             var id = Console.ReadLine();
             Delete(int.Parse(id));
             Console.ReadKey();
-            MenuUserScreen.Load();
+            MenuRoleScreen.Load();
         }
 
         public static void Delete(int id)
         {
             try
             {
-                var repository = new Repository<User>(Database.Connection);
+                var repository = new Repository<Role>(Database.Connection);
                 repository.Delete(id);
-                Console.WriteLine("User was sucessfull deleted.");
+                Console.WriteLine("Tag was sucessfull deleted.");
             }
             catch (Exception ex)
             {

@@ -7,14 +7,14 @@ namespace BlogLucas.Screens.CategoryScreens
         public static void Load()
         {
             Console.Clear();
-            Console.WriteLine("User management");
+            Console.WriteLine("Category management");
             Console.WriteLine("--------------");
             Console.WriteLine("Options: ");
             Console.WriteLine();
-            Console.WriteLine("1 - List Users");
-            Console.WriteLine("2 - Register User");
-            Console.WriteLine("3 - Update User");
-            Console.WriteLine("4 - Delete User");
+            Console.WriteLine("1 - List Categories");
+            Console.WriteLine("2 - Register Category");
+            Console.WriteLine("3 - Update Category");
+            Console.WriteLine("4 - Delete Category");
             Console.WriteLine();
             Console.WriteLine();
             var option = short.Parse(Console.ReadLine());

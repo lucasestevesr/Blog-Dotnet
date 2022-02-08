@@ -1,8 +1,8 @@
 using System;
 
-namespace BlogLucas.Screens.UserScreens
+namespace BlogLucas.Screens.RoleScreens
 {
-    public static class MenuUserScreen
+    public static class MenuRoleScreen
     {
         public static void Load()
         {
@@ -11,10 +11,10 @@ namespace BlogLucas.Screens.UserScreens
             Console.WriteLine("--------------");
             Console.WriteLine("Options: ");
             Console.WriteLine();
-            Console.WriteLine("1 - List Users");
-            Console.WriteLine("2 - Register User");
-            Console.WriteLine("3 - Update User");
-            Console.WriteLine("4 - Delete User");
+            Console.WriteLine("1 - List Role");
+            Console.WriteLine("2 - Register Role");
+            Console.WriteLine("3 - Update Role");
+            Console.WriteLine("4 - Delete Role");
             Console.WriteLine();
             Console.WriteLine();
             var option = short.Parse(Console.ReadLine());
@@ -22,16 +22,16 @@ namespace BlogLucas.Screens.UserScreens
             switch (option)
             {
                 case 1:
-                    ListUserScreen.Load();
+                    ListRoleScreen.Load();
                     break;
                 case 2:
-                    CreateUserScreen.Load();
+                    CreateRoleScreen.Load();
                     break;
                 case 3:
-                    UpdateUserScreen.Load();
+                    UpdateRoleScreen.Load();
                     break;
                 case 4:
-                    DeleteUserScreen.Load();
+                    DeleteRoleScreen.Load();
                     break;
                 default: Load(); break;
             }

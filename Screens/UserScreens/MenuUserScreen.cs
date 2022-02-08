@@ -1,5 +1,3 @@
-using System;
-
 namespace BlogLucas.Screens.UserScreens
 {
     public static class MenuUserScreen

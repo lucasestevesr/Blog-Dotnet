@@ -2,40 +2,35 @@ using System;
 using BlogLucas.Models;
 using BlogLucas.Repositories;
 
-namespace BlogLucas.Screens.CategoryScreens
+namespace BlogLucas.Screens.RoleScreens
 {
-    public static class CreateCategoryScreen
+    public static class CreateRoleScreen
     {
         public static void Load()
         {
             Console.Clear();
-            Console.WriteLine("Create new Category: ");
+            Console.WriteLine("Create new Role: ");
             Console.WriteLine("-------------- ");
-
             Console.WriteLine("Name: ");
             var name = Console.ReadLine();
-          
             Console.WriteLine("Slug: ");
-            var slug = Console.ReadLine();           
-
-            var posts = new List<Post>();       
-               
-            Create(new Category(posts)
+            var slug = Console.ReadLine();
+            Create(new Role
             {
                 Name = name,
-                Slug = slug,                 
+                Slug = slug
             });
             Console.ReadKey();
-            MenuCategoryScreen.Load();
+            MenuRoleScreen.Load();
         }
 
-        public static void Create(Category category)
+        public static void Create(Role role)
         {
             try
             {
-                var repository = new Repository<Category>(Database.Connection);
-                repository.Create(category);
-                Console.WriteLine("Category was sucessfull created.");
+                var repository = new Repository<Role>(Database.Connection);
+                repository.Create(role);
+                Console.WriteLine("Tag was sucessfull created.");
             }
             catch (Exception ex)
             {

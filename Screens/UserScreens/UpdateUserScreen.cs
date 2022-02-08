@@ -1,4 +1,3 @@
-using System;
 using BlogLucas.Models;
 using BlogLucas.Repositories;
 
