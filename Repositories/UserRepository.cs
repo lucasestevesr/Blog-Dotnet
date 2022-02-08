@@ -43,5 +43,27 @@ namespace BlogLucas.Repositories
                 
             return users;
         }
+
+        public void BindUserRole(int userId, int roleId)
+        {
+            var insertSql = @"INSERT INTO [UserRole] VALUES(@userId, @roleId)";
+
+            _connection.Execute(insertSql, new
+            {
+                userId,
+                roleId
+            });
+        }
+
+        public void UnbindUserRole(int userId, int roleId)
+        {
+            var deleteSql = @"DELETE FROM [UserRole] WHERE [UserId] = @userId and [RoleId] = @roleId";
+
+            _connection.Execute(deleteSql, new
+            {
+                userId,
+                roleId
+            });
+        }
     }
 }

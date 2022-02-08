@@ -18,8 +18,8 @@ namespace BlogLucas.Screens.CategoryScreens
             Console.WriteLine("Slug: ");
             var slug = Console.ReadLine();           
 
-            var posts = new List<Post>();       
-               
+            var posts = new List<Post>();
+                        
             Create(new Category(posts)
             {
                 Name = name,
