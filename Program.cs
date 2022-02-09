@@ -12,7 +12,7 @@ namespace BlogLucas
 {
     class Program
     {
-        private const string CONNECTION_STRING = @"Server=localhost,1433;Database=BlogLucas;User ID=sa;Password=Rkpzlx56!!;TrustServerCertificate=True";
+        private const string CONNECTION_STRING = @"Server=localhost,1433;Database=BlogLucas;User ID=sa;Password=;TrustServerCertificate=True";
         static void Main(string[] args)
         {
             Database.Connection = new SqlConnection(CONNECTION_STRING);
